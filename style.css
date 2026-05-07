@@ -1,0 +1,245 @@
+/* Reset Basico*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #15a6c6;
+    color: #ffff;
+}
+
+.main__login_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div__login-box {
+    margin-top: 23px;
+    background: #080808;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    border-radius: 15px ;
+    max-width: 400px; /* se limita el tamaño a pantallas grandes */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #a9c2e7;
+ 
+}
+
+.div__input-group{
+    margin-bottom: 25px;
+}
+
+
+label{
+    display: block;
+    margin-bottom:  8px;
+    font-weight: 600;
+    font-size: 0.9rem;  
+    font-weight: bold;  
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+   
+}
+
+
+
+button:hover {
+    background-color: #87bde2;
+}
+
+.error-message {
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+.body__dashboard{
+    display: flex;
+    background-color: #f4f6f9;
+    min-height: 100vh;
+  }
+
+  .nav__sidebar{
+    width: 250px;
+    background-color: #82b5f0;
+    color: white;
+    display: flex;
+    flex-direction:column;
+}
+
+    .div__nav{
+        padding:18px;
+        flex-grow: 1;
+        background-color: #60a8dc;
+}
+
+    .nav__links{
+        list-style: none;
+        padding: 0;
+        margin-top:20px;
+    }
+
+    .nav__links li a{
+        display: block;
+        color:#f9f9f9;
+        text-decoration: none;
+        padding: 16px 18px;
+        transition: background 0.3s;
+    }
+
+    .nav__links li a:hover, .nav__links li a.active{
+        background-color: rgb(60, 124, 184);
+        border-left: 4px solid #0297fa;
+    
+    }
+
+    .btn-logout{
+        background-color: #41a1d8;
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .btn-logout:hover {
+        background-color: #0b0b0b;
+
+    }
+
+    .main__content{
+        flex-grow: 1;
+        padding: 30px;
+    }
+
+    .header__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid rgb(112, 165, 191);
+    }
+
+    .section__metricas-grid{
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+       gap: 20px
+    }
+
+
+    .tarjetas__metricas{
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+    
+    }
+
+
+      .tarjetas__metricas h3{
+        color: #3b76aa;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .num-metricas{
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #2c3e50;
+    
+
+    }
+
+
+/*esto es el directorio*/
+#sidebar { 
+    width: 250px; 
+    background: #2c3e50; 
+    color: white; 
+    padding: 20px; 
+
+}
+
+#sidebar button { 
+    display: block; 
+    width: 100%; 
+    margin-bottom: 10px; 
+    padding: 10px; cursor: pointer; 
+    text-align: left; 
+
+}
+
+#main-content { 
+    flex-grow: 1; 
+    padding: 20px; 
+    background: #ecf0f1; 
+    overflow-y: auto; 
+
+}
+
+#search-bar { 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    box-sizing: border-box; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: white;
+ }
+
+th, td { 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    text-align: left; 
+}
+
+
+th { 
+    background-color: #34495e; 
+    color: white; 
+}
+
+.btn-peligro { 
+    background: #e74c3c; 
+    color: white; border: none; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+    border-radius: 4px; }

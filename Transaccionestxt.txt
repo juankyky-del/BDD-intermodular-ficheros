@@ -1,0 +1,36 @@
+START TRANSACTION;
+
+UPDATE empleados
+SET estado = 'DESPEDIDO'
+WHERE id_empleado = 2;
+
+UPDATE credenciales_acceso
+SET cuenta_bloqueada = 1
+WHERE id_empleado = 2;
+
+UPDATE historial_salarial
+SET fecha_fin = '2024-03-01'
+WHERE id_empleado = 2;
+
+UPDATE asignaciones_proyectos
+SET fecha_desasignacion = '2024-03-01'
+WHERE id_empleado = 2;
+
+INSERT INTO registro_auditoria 
+(id_log, id_credencial_autor, tabla_afectada, accion, fecha_hora, detalles)
+VALUES (1, 2, 'empleados', 'DELETE', '2024-03-01', 'termino de contrato');
+
+COMMIT;
+
+comprobación
+
+SELECT 
+    e.id_empleado,
+    e.estado AS estado_empleado,
+    c.cuenta_bloqueada,
+    h.fecha_fin AS cierre_salarial,	
+FROM empleados e
+LEFT JOIN credenciales_acceso c ON e.id_empleado = c.id_empleado
+LEFT JOIN historial_salarial h ON e.id_empleado = h.id_empleado
+LEFT JOIN asignaciones_proyectos a ON e.id_empleado = a.id_empleado
+WHERE e.id_empleado = 2

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tu_archivo.css">
+    <title>Directorio</title>
+</head>
+
+<body id="pagina-directorio">
+
+    <div id="sidebar">
+        <h2>Consultas</h2>
+        <button id="btnEmpleados">1. Lista de Empleados</button>
+        <button id="btnProyectos">2. Proyectos Activos</button>
+        <button id="btnTickets">3. Tickets Abiertos</button>
+    </div>
+
+    <div id="main-content">
+        <h2 id="tituloConsulta">Selecciona una consulta en el menú izquierdo</h2>
+        
+        <input type="text" id="inputFiltro" placeholder="Escribe para filtrar en la tabla..." style="display: none;">
+
+        <table id="tablaDatos" style="display: none;">
+            <thead id="cabeceraTabla">
+            </thead>
+            <tbody id="cuerpoTabla">
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="main.js"></script>   
+</body>
+</html>
